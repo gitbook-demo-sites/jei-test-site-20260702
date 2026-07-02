@@ -1,7 +1,7 @@
 ---
 description: "Plan projects, ship missions, and automate delivery with Orbitly."
 icon: rocket
-cover: .gitbook/assets/gitbook-orbitly-banner.svg
+cover: .gitbook/assets/orbitly-docs-banner.svg
 coverY: 0
 layout:
   width: wide
@@ -22,21 +22,23 @@ layout:
 
 # Welcome to Orbitly
 
-<img src=".gitbook/assets/gitbook-mark.svg" alt="GitBook" data-size="line">
+<img src=".gitbook/assets/orbitly-wordmark.svg" alt="Orbitly" data-size="line">
 
 Orbitly is a lightweight project tracking platform for teams that ship fast. This documentation covers everything from your first project to advanced API integrations.
 
 {% hint style="info" %}
-Orbitly is a fictional product presented with GitBook branding. This content is dummy documentation for testing GitBook structure, formatting, navigation, and publishing workflows.
+Orbitly is a fictional product with its own brand system. This content is dummy documentation for testing structure, formatting, navigation, and publishing workflows.
 {% endhint %}
 
-## GitBook demo treatment
+## Orbitly brand treatment
 
 | Element | Applied style |
 | --- | --- |
-| Primary color | GitBook orange `#F25B3A` for accents and actions |
-| Background tone | GitBook dark base `#1C1917` with neutral greys |
-| Visual system | Wide banner, wordmark, cards, hints, tabs, and diagrams |
+| Primary color | Orbit blue `#2563EB` for links, actions, and product emphasis |
+| Secondary color | Signal cyan `#22D3EE` for orbital lines and highlights |
+| Accent color | Launch amber `#F59E0B` for key moments and positive emphasis |
+| Background tone | Orbit ink `#111827` with cloud and sky surfaces |
+| Visual system | Wide orbital banner, Orbitly wordmark, cards, hints, tabs, and diagrams |
 | Content goal | Show how product docs can be structured for humans and AI agents |
 
 ## Choose your path

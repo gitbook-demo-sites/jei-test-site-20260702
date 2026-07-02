@@ -1,7 +1,7 @@
 ---
 description: "A clean, organized test documentation hub for evaluating GitBook workflows."
 icon: house
-cover: .gitbook/assets/gitbook-home-banner.svg
+cover: .gitbook/assets/orbitly-home-banner.svg
 coverY: 0
 layout:
   width: wide
@@ -22,22 +22,24 @@ layout:
 
 # Jei Test Site
 
-<img src=".gitbook/assets/gitbook-mark.svg" alt="GitBook" data-size="line">
+<img src=".gitbook/assets/orbitly-wordmark.svg" alt="Orbitly" data-size="line">
 
 Use this space to test how GitBook handles structured docs, reviews, publishing, permissions, AI search, and MCP-ready content.
 
 {% hint style="info" %}
-This is a GitBook-branded test environment owned by <code class="expression">space.vars.owner</code>. Treat it as a sandbox for trying workflows before applying them to customer-facing or internal production docs.
+This is an Orbitly-branded test environment owned by <code class="expression">space.vars.owner</code>. Treat it as a sandbox for trying workflows before applying them to customer-facing or internal production docs.
 {% endhint %}
 
 ## Brand system
 
 | Element | Applied style |
 | --- | --- |
-| Primary color | GitBook orange `#F25B3A` |
-| Base tone | GitBook dark base `#1C1917` |
-| Surfaces | GitBook grey range for muted backgrounds and borders |
-| Logo treatment | GitBook-style wordmark, scaled uniformly and kept high contrast |
+| Primary color | Orbit blue `#2563EB` |
+| Secondary color | Signal cyan `#22D3EE` |
+| Accent color | Launch amber `#F59E0B` |
+| Base tone | Orbit ink `#111827` |
+| Surfaces | Cloud `#F8FAFC` and soft sky `#E0F2FE` |
+| Logo treatment | Orbital wordmark and icon, scaled uniformly and kept high contrast |
 
 <table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody>
 <tr>
