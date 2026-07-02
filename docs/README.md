@@ -1,8 +1,13 @@
 ---
 description: "Plan projects, ship missions, and automate delivery with Orbitly."
 icon: rocket
+cover: .gitbook/assets/gitbook-orbitly-banner.svg
+coverY: 0
 layout:
   width: wide
+  cover:
+    visible: true
+    size: full
   title:
     visible: true
   description:
@@ -17,11 +22,22 @@ layout:
 
 # Welcome to Orbitly
 
+<img src=".gitbook/assets/gitbook-mark.svg" alt="GitBook" data-size="line">
+
 Orbitly is a lightweight project tracking platform for teams that ship fast. This documentation covers everything from your first project to advanced API integrations.
 
 {% hint style="info" %}
-Orbitly is a fictional product. This content is dummy documentation for testing GitBook structure, formatting, navigation, and publishing workflows.
+Orbitly is a fictional product presented with GitBook branding. This content is dummy documentation for testing GitBook structure, formatting, navigation, and publishing workflows.
 {% endhint %}
+
+## GitBook demo treatment
+
+| Element | Applied style |
+| --- | --- |
+| Primary color | GitBook orange `#F25B3A` for accents and actions |
+| Background tone | GitBook dark base `#1C1917` with neutral greys |
+| Visual system | Wide banner, wordmark, cards, hints, tabs, and diagrams |
+| Content goal | Show how product docs can be structured for humans and AI agents |
 
 ## Choose your path
 

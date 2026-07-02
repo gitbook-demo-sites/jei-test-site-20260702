@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="420" viewBox="0 0 1600 420" role="img" aria-labelledby="title desc">
+  <title id="title">GitBook branded Orbitly Docs banner</title>
+  <desc id="desc">Dark GitBook-style banner with orange accents and Orbitly Docs text.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1C1917"/>
+      <stop offset="0.58" stop-color="#262930"/>
+      <stop offset="1" stop-color="#57534D"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F25B3A"/>
+      <stop offset="1" stop-color="#FF8A65"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="420" rx="0" fill="url(#bg)"/>
+  <path d="M1120 48C1278 20 1454 76 1516 204c59 122-21 205-157 185-142-20-284-139-293-241-4-48 18-85 54-100Z" fill="#F25B3A" opacity="0.18"/>
+  <path d="M1335 80c80 18 151 74 165 142 14 65-36 110-119 101-84-9-162-72-174-140-13-68 44-121 128-103Z" fill="#F25B3A" opacity="0.42"/>
+  <g transform="translate(96 86)">
+    <rect width="78" height="78" rx="20" fill="#F25B3A"/>
+    <path d="M26 23h24c11 0 20 9 20 20s-9 20-20 20H26V23Zm15 14v12h9a6 6 0 0 0 0-12h-9Z" fill="#1C1917"/>
+    <text x="108" y="52" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="700" fill="#FAFAF9">GitBook</text>
+  </g>
+  <text x="96" y="236" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="760" fill="#FAFAF9">Orbitly Docs</text>
+  <text x="99" y="292" font-family="Inter, Arial, sans-serif" font-size="28" fill="#EFEEED">A polished product documentation demo built with GitBook structure, search, and collaboration patterns.</text>
+  <g transform="translate(100 338)" font-family="Inter, Arial, sans-serif" font-size="20" fill="#FAFAF9">
+    <rect x="0" y="-28" width="190" height="42" rx="21" fill="#F25B3A"/>
+    <text x="24" y="0" font-weight="700" fill="#1C1917">Docs as product</text>
+    <rect x="214" y="-28" width="174" height="42" rx="21" fill="#262930" stroke="#79716B"/>
+    <text x="238" y="0">AI ready</text>
+    <rect x="410" y="-28" width="176" height="42" rx="21" fill="#262930" stroke="#79716B"/>
+    <text x="434" y="0">Review first</text>
+  </g>
+</svg>

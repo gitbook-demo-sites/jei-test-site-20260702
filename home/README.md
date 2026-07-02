@@ -1,8 +1,13 @@
 ---
 description: "A clean, organized test documentation hub for evaluating GitBook workflows."
 icon: house
+cover: .gitbook/assets/gitbook-home-banner.svg
+coverY: 0
 layout:
   width: wide
+  cover:
+    visible: true
+    size: full
   title:
     visible: true
   description:
@@ -17,11 +22,22 @@ layout:
 
 # Jei Test Site
 
+<img src=".gitbook/assets/gitbook-mark.svg" alt="GitBook" data-size="line">
+
 Use this space to test how GitBook handles structured docs, reviews, publishing, permissions, AI search, and MCP-ready content.
 
 {% hint style="info" %}
-This is a safe test environment owned by <code class="expression">space.vars.owner</code>. Treat it as a sandbox for trying workflows before applying them to customer-facing or internal production docs.
+This is a GitBook-branded test environment owned by <code class="expression">space.vars.owner</code>. Treat it as a sandbox for trying workflows before applying them to customer-facing or internal production docs.
 {% endhint %}
+
+## Brand system
+
+| Element | Applied style |
+| --- | --- |
+| Primary color | GitBook orange `#F25B3A` |
+| Base tone | GitBook dark base `#1C1917` |
+| Surfaces | GitBook grey range for muted backgrounds and borders |
+| Logo treatment | GitBook-style wordmark, scaled uniformly and kept high contrast |
 
 <table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody>
 <tr>
