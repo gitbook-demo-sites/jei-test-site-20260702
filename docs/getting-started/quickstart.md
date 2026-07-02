@@ -1,18 +1,29 @@
+---
+description: "Create your first Orbitly project and invite teammates in five minutes."
+icon: bolt
+---
+
 # Quickstart
 
 Get from zero to your first tracked project in about 5 minutes.
 
-## 1. Create an account
+{% stepper %}
+{% step %}
+### Create an account
 
 Sign up at `app.orbitly.example.com` with your work email. Every new account starts on the free **Explorer** plan (up to 3 projects, 5 teammates).
+{% endstep %}
 
-## 2. Create your first project
+{% step %}
+### Create your first project
 
-1. Click **New Project** in the sidebar
-2. Give it a name, e.g. `Website Redesign`
-3. Pick a template — **Kanban** is a good default
+1. Click **New Project** in the sidebar.
+2. Give it a name, such as `Website Redesign`.
+3. Pick a template. **Kanban** is a good default.
+{% endstep %}
 
-## 3. Add missions
+{% step %}
+### Add missions
 
 Missions are Orbitly's unit of work. Add a few:
 
@@ -23,8 +34,10 @@ Missions are Orbitly's unit of work. Add a few:
 ```
 
 Drag missions between columns to update their status.
+{% endstep %}
 
-## 4. Invite your team
+{% step %}
+### Invite your team
 
 Go to **Settings → Members** and invite teammates by email. Roles:
 
@@ -33,10 +46,18 @@ Go to **Settings → Members** and invite teammates by email. Roles:
 | Admin | Everything, including billing |
 | Member | Create and edit missions |
 | Viewer | Read-only access |
+{% endstep %}
 
-## 5. Set a launch window
+{% step %}
+### Set a launch window
 
 A launch window is a time-boxed sprint. Click **New Launch Window**, set a 2-week range, and drag missions into it. Unfinished missions roll over automatically when the window closes.
+{% endstep %}
+{% endstepper %}
+
+{% hint style="success" %}
+You are ready when the project has at least one mission, one teammate, and one launch window.
+{% endhint %}
 
 ## Next steps
 

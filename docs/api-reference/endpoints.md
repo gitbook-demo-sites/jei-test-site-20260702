@@ -1,15 +1,28 @@
+---
+description: "Core REST endpoints for projects, missions, launch windows, and users."
+icon: code
+---
+
 # Endpoints
 
 All endpoints are relative to `https://api.orbitly.example.com/v2`. Responses are JSON. List endpoints support `?limit=` (max 100) and cursor-based pagination via `?after=`.
+
+{% hint style="info" %}
+Use the API for automation, imports, reporting, and workflow integrations. Use webhooks when another system needs to react to Orbitly changes.
+{% endhint %}
 
 ## Missions
 
 ### List missions
 
+{% tabs %}
+{% tab title="Request" %}
 ```
 GET /missions?project=prj_a8x2k&status=open
 ```
+{% endtab %}
 
+{% tab title="Response" %}
 ```json
 {
   "data": [
@@ -26,6 +39,8 @@ GET /missions?project=prj_a8x2k&status=open
   "next_cursor": "eyJpZCI6MTQyfQ"
 }
 ```
+{% endtab %}
+{% endtabs %}
 
 ### Create a mission
 

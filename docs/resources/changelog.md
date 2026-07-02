@@ -1,28 +1,45 @@
+---
+description: "Product updates, API changes, fixes, and deprecations."
+icon: clock-rotate-left
+layout:
+  width: wide
+---
+
 # Changelog
 
-## v3.2 — June 2026
+{% updates format="full" %}
+{% update date="2026-06-15" tags="product,fix" %}
+## v3.2
 
-* **New:** Mission dependencies — mark missions as blocked by others, visualized on the timeline
-* **New:** CSV import for bulk mission creation
-* **Improved:** Board rendering is ~40% faster on projects with 200+ missions
-* **Fixed:** Launch window rollover occasionally duplicated sub-missions
+* Mission dependencies can now mark missions as blocked by other work and visualize blockers on the timeline.
+* CSV import is available for bulk mission creation.
+* Board rendering is about 40% faster on projects with 200+ missions.
+* Launch window rollover no longer duplicates sub-missions in edge cases.
+{% endupdate %}
 
-## v3.1 — April 2026
+{% update date="2026-04-10" tags="product,api" %}
+## v3.1
 
-* **New:** Figma embeds in mission descriptions
-* **New:** `orbitly window close` CLI command
-* **Improved:** Search now matches comment content, not just titles
-* **Fixed:** Timezone drift in daily digest emails for UTC+ offsets
+* Figma embeds are supported in mission descriptions.
+* The CLI now includes `orbitly window close`.
+* Search matches comment content, not just mission titles.
+* Daily digest timezone handling is more reliable for UTC+ offsets.
+{% endupdate %}
 
-## v3.0 — February 2026
+{% update date="2026-02-18" tags="product,api,breaking" %}
+## v3.0
 
-* **New:** Telemetry 2.0 — rebuilt dashboards with velocity trends, cycle time, and cumulative flow
-* **New:** Service accounts for API automations
-* **New:** Guest role for external collaborators
-* **Breaking:** API v1 is deprecated; sunset scheduled for December 2026. Migrate to `/v2`.
+* Telemetry 2.0 adds velocity trends, cycle time, and cumulative flow dashboards.
+* Service accounts are available for API automations.
+* Guest roles support external collaborators.
+* API v1 is deprecated and scheduled for sunset in December 2026. Migrate to `/v2`.
+{% endupdate %}
 
-## v2.9 — December 2025
+{% update date="2025-12-08" tags="product,fix" %}
+## v2.9
 
-* **New:** Zapier integration
-* **Improved:** Webhook retry policy now caps at 5 attempts with backoff
-* **Fixed:** `@mention` autocomplete failing for names with diacritics
+* Zapier integration is now available.
+* Webhook retry policy now caps at five attempts with backoff.
+* `@mention` autocomplete works for names with diacritics.
+{% endupdate %}
+{% endupdates %}

@@ -1,0 +1,12 @@
+- tag: product
+  label: Product
+  icon: sparkles
+- tag: api
+  label: API
+  icon: code
+- tag: fix
+  label: Fix
+  icon: wrench
+- tag: breaking
+  label: Breaking
+  icon: triangle-exclamation
