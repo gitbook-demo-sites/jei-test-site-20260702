@@ -1,5 +1,6 @@
 ---
-description: Install and use the official Orbitly JavaScript/TypeScript SDK.
+description: "Install and use the official Orbitly JavaScript and TypeScript SDK."
+icon: js
 ---
 
 # JavaScript SDK
@@ -50,6 +51,36 @@ const mission = await client.missions.create({
 console.log(`Created ${mission.id}`);
 ```
 
+## Configure the client
+
+{% tabs %}
+{% tab title="Environment token" %}
+```typescript
+const client = new Orbitly({
+  token: process.env.ORBITLY_TOKEN,
+});
+```
+{% endtab %}
+
+{% tab title="Test workspace" %}
+```typescript
+const client = new Orbitly({
+  token: process.env.ORBITLY_TEST_TOKEN,
+  workspace: "sandbox",
+});
+```
+{% endtab %}
+
+{% tab title="Custom base URL" %}
+```typescript
+const client = new Orbitly({
+  token: process.env.ORBITLY_TOKEN,
+  baseUrl: "https://api.orbitly.example.com/v2",
+});
+```
+{% endtab %}
+{% endtabs %}
+
 ## Pagination
 
 List methods return async iterators — no manual cursor handling:
@@ -75,3 +106,7 @@ try {
   }
 }
 ```
+
+{% hint style="info" %}
+The SDK retries rate-limited and transient server errors. Validation and permission errors are returned immediately so your app can surface the problem.
+{% endhint %}

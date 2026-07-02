@@ -7,6 +7,31 @@ icon: code
 
 Official client libraries wrap the REST API with typed models, automatic pagination, retries, and rate-limit handling.
 
+<table data-view="cards">
+  <thead>
+    <tr>
+      <th width="48"></th>
+      <th></th>
+      <th></th>
+      <th data-hidden data-card-target data-type="content-ref"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><i class="fa-js"></i></td>
+      <td><strong>JavaScript / TypeScript</strong></td>
+      <td>Typed client for Node.js services, build scripts, and internal tools.</td>
+      <td><a href="javascript.md">javascript</a></td>
+    </tr>
+    <tr>
+      <td><i class="fa-python"></i></td>
+      <td><strong>Python</strong></td>
+      <td>Python client for data pipelines, notebooks, and backend automation.</td>
+      <td><a href="python.md">python</a></td>
+    </tr>
+  </tbody>
+</table>
+
 | SDK | Package | Min version |
 | --- | ------- | ----------- |
 | [JavaScript / TypeScript](javascript.md) | `@orbitly/sdk` | Node 18+ |
@@ -27,3 +52,7 @@ Not maintained by Orbitly, but actively used:
 ## Versioning
 
 SDKs follow semver and track API v2. Breaking API changes ship as a new SDK major version with a 6-month overlap window.
+
+{% hint style="success" %}
+Use SDKs for production integrations. Use raw HTTP examples when debugging requests or building a client for an unsupported language.
+{% endhint %}

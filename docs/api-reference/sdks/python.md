@@ -1,5 +1,6 @@
 ---
-description: Install and use the official Orbitly Python SDK.
+description: "Install and use the official Orbitly Python SDK for scripts, services, and analytics workflows."
+icon: python
 ---
 
 # Python SDK
@@ -29,6 +30,37 @@ mission = client.missions.create(
 )
 print(f"Created {mission.id}")
 ```
+
+## Configure the client
+
+{% tabs %}
+{% tab title="Environment token" %}
+```python
+from orbitly import Orbitly
+
+client = Orbitly()  # reads ORBITLY_TOKEN
+```
+{% endtab %}
+
+{% tab title="Explicit token" %}
+```python
+from orbitly import Orbitly
+
+client = Orbitly(token="orb_test_xxxxxxxxxxxx")
+```
+{% endtab %}
+
+{% tab title="Custom base URL" %}
+```python
+from orbitly import Orbitly
+
+client = Orbitly(
+    token="orb_live_xxxxxxxxxxxx",
+    base_url="https://api.orbitly.example.com/v2",
+)
+```
+{% endtab %}
+{% endtabs %}
 
 ## Pagination
 

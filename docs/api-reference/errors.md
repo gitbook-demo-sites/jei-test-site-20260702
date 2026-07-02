@@ -1,6 +1,11 @@
+---
+description: "Understand Orbitly API error responses, status codes, validation details, and retry guidance."
+icon: triangle-exclamation
+---
+
 # Errors
 
-The API uses conventional HTTP status codes and returns a structured error body:
+The API uses conventional HTTP status codes and returns a structured error body.
 
 ```json
 {
@@ -14,16 +19,20 @@ The API uses conventional HTTP status codes and returns a structured error body:
 
 ## Status codes
 
-| Code | Meaning |
-| ---- | ------- |
-| `400` | Malformed request body or invalid parameters |
-| `401` | Missing or invalid API token |
-| `403` | Token valid but lacks permission for this resource |
-| `404` | Resource doesn't exist or isn't visible to you |
-| `409` | Conflict — e.g. duplicate mission ID prefix |
-| `422` | Validation failed; see `error.fields` for details |
-| `429` | Rate limit exceeded; respect `Retry-After` |
-| `500` | Something broke on our end — retry with backoff |
+| Code | Meaning | Retry? |
+| ---- | ------- | ------ |
+| `400` | Malformed request body or invalid parameters | No |
+| `401` | Missing or invalid API token | No |
+| `403` | Token valid but lacks permission for this resource | No |
+| `404` | Resource does not exist or is not visible to you | No |
+| `409` | Conflict, such as duplicate mission ID prefix | Sometimes |
+| `422` | Validation failed; see `error.fields` for details | No |
+| `429` | Rate limit exceeded; respect `Retry-After` | Yes |
+| `500` | Something broke on our end | Yes |
+
+{% hint style="warning" %}
+Only retry `429` and `5xx` responses automatically. Retrying validation or permission errors usually creates more noise without fixing the request.
+{% endhint %}
 
 ## Validation errors
 
@@ -44,9 +53,41 @@ The API uses conventional HTTP status codes and returns a structured error body:
 
 ## Common error codes
 
-| Code | Fix |
-| ---- | --- |
-| `token_expired` | Rotate the token in Settings |
-| `workspace_suspended` | Billing issue — contact an admin |
-| `mission_locked` | Mission is in a closed launch window |
-| `plan_limit_reached` | Upgrade plan or archive unused projects |
+<table data-view="cards">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>`token_expired`</strong></td>
+      <td>Rotate the token in Settings.</td>
+    </tr>
+    <tr>
+      <td><strong>`workspace_suspended`</strong></td>
+      <td>Resolve the billing issue or contact a workspace admin.</td>
+    </tr>
+    <tr>
+      <td><strong>`mission_locked`</strong></td>
+      <td>The mission is in a closed launch window. Reopen the window or create a follow-up mission.</td>
+    </tr>
+    <tr>
+      <td><strong>`plan_limit_reached`</strong></td>
+      <td>Upgrade the plan or archive unused projects.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Retry pattern
+
+```mermaid
+flowchart TD
+    Response["Receive error"] --> Kind{"Status code"}
+    Kind -->|429| Wait["Wait Retry-After"]
+    Kind -->|5xx| Backoff["Retry with exponential backoff"]
+    Kind -->|4xx| Fix["Fix request or permissions"]
+    Wait --> Retry["Retry request"]
+    Backoff --> Retry
+```

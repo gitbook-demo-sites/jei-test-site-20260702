@@ -1,20 +1,64 @@
 ---
-description: Copy-paste automation recipes for common team workflows.
+description: "Copy-paste automation recipes for bug triage, launches, reviews, sprint hygiene, and warehouse events."
+icon: wand-magic-sparkles
 ---
 
 # Example recipes
 
-## Auto-triage new bugs
+Use these recipes as starting points. Adjust labels, teams, channels, and templates to match your workspace.
 
-> **When** mission created **if** label contains `bug` **then** set priority High, assign round-robin to team `QA`, post to `#bug-triage`.
+{% hint style="info" %}
+Before enabling a recipe for the whole project, run it in draft mode and inspect the execution history for skipped and matched events.
+{% endhint %}
+
+## Bug triage
+
+{% tabs %}
+{% tab title="Rule" %}
+* **When:** mission created
+* **If:** label contains `bug`
+* **Then:** set priority High, assign round-robin to team `QA`, and post to `#bug-triage`
+{% endtab %}
+
+{% tab title="Slack message" %}
+```text
+New bug needs triage: {{mission.id}} - {{mission.title}}
+Assigned to: {{mission.assignee}}
+```
+{% endtab %}
+{% endtabs %}
 
 ## Celebrate launches
 
-> **When** mission moved **if** column is `Done` **and** fuel ≥ 5 **then** post to `#wins`: 🎉 `{{mission.assignee}}` shipped `{{mission.title}}`.
+* **When:** mission moved
+* **If:** column is `Done` and fuel is greater than or equal to `5`
+* **Then:** post to `#wins`
+
+```text
+{{mission.assignee}} shipped {{mission.title}} in {{window.name}}.
+```
 
 ## Escalate stale reviews
 
-> **When** review requested **if** no decision after 48 h **then** notify reviewer's manager and add label `review-stale`.
+{% stepper %}
+{% step %}
+## Detect the stale review
+
+**When** review requested and no decision is made after 48 hours.
+{% endstep %}
+
+{% step %}
+## Notify the owner
+
+Notify the reviewer's manager and mention the mission owner.
+{% endstep %}
+
+{% step %}
+## Mark the mission
+
+Add the `review-stale` label so it appears in the team's blocked-work view.
+{% endstep %}
+{% endstepper %}
 
 ## Sprint hygiene
 
@@ -41,3 +85,7 @@ description: Copy-paste automation recipes for common team workflows.
   "window": "{{window.name}}"
 }
 ```
+
+{% hint style="success" %}
+This recipe works best when the receiving endpoint accepts quickly and processes the event asynchronously.
+{% endhint %}
